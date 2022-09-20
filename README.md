@@ -1,7 +1,18 @@
-## Server
+## Pre-requisities
 
-To start server run:
+Please set the enviromnent variables in the `.env` file by correct values
 
 ```bash
-npm run start
+cd server
+cp .env.example .env
+```
+___
+## Running tracker server
+
+To start a development server run:
+
+```bash
+cd server
+npm i
+npm run start // or `npm start`
 ```

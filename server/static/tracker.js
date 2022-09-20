@@ -14,7 +14,7 @@ const buildPostBody = (userEvents) => ({
   headers: {
     'Content-Type': 'application/json; charset=utf-8',
   },
-  body: JSON.stringify([...userEvents]),
+  body: JSON.stringify([...userEvents.keys()]),
 });
 
 const EventQueue = {
