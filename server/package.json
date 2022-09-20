@@ -1,0 +1,33 @@
+{
+  "name": "collector-server",
+  "version": "1.0.0",
+  "description": "Used to collect user activity",
+  "main": "index.js",
+  "scripts": {
+    "lint": "prettier --write ./src",
+    "tsc:build": "rm -rf dist && tsc",
+    "start": "rm -rf dist && npm run tsc:build && node ./dist/index.js",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "./src/**/*.ts": "prettier --write ./src"
+  },
+  "author": "m0sk1t",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "koa": "^2.13.4",
+    "koa-cors": "^0.0.16",
+    "koa-router": "^12.0.0"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.13.5",
+    "@types/koa-cors": "^0.0.2",
+    "@types/koa-router": "^7.4.4",
+    "@types/node": "^18.7.18",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.3"
+  }
+}
